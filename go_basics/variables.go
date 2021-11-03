@@ -42,9 +42,9 @@ func main() {
 	var a int // declaration
 	a = 12    // initialization  local scope level visiblity
 
-	var b int = 15 // short hand operator both initialization and declaration in one line, get datatype by infering 
+	var b int = 15 // both initialization and declaration in one line
 
-	c := 22
+	c := 22 // short hand operator both initialization and declaration in one line, get datatype by infering 
 	fmt.Println("a = ", a)
 	fmt.Println("b = ", b)
 	fmt.Println("c = ", c)
