@@ -5,6 +5,7 @@ import (
 )
 
 func main() {
+
 	marks := []int{30, 40, 50} // array declaration and initialization
 	fmt.Printf("%v\n", marks)
 
@@ -59,7 +60,7 @@ func main() {
 	fmt.Println("slice6 = ", slice6)
 	fmt.Println("slice7 = ", slice7)
 
-	s := make([]int, 3)  // creating slice using make function
+	s := make([]int, 3) // creating slice using make function
 	fmt.Println(s)
 	fmt.Println("Length = ", len(s))
 	fmt.Println("Capacity = ", cap(s))
@@ -67,36 +68,45 @@ func main() {
 	// s := make([]int, 3, 100)  // creating slice of 3 elements from an array of 100 elements
 
 	s = []int{}
-	s = append(s, 1,2,3,4,5)
+	s = append(s, 1, 2, 3, 4, 5)
 	fmt.Println(s)
 	fmt.Println("Length = ", len(s))
 	fmt.Println("Capacity = ", cap(s))
 
-	s = append(s, 11,12,13,14,15)
+	s = append(s, 11, 12, 13, 14, 15)
 	fmt.Println(s)
 	fmt.Println("Length = ", len(s))
 	fmt.Println("Capacity = ", cap(s))
 
-	s = append(s, 21,22,23,24,25,26)
+	s = append(s, 21, 22, 23, 24, 25, 26)
 	fmt.Println(s)
 	fmt.Println("Length = ", len(s))
 	fmt.Println("Capacity = ", cap(s))
 
-
-	s = append(s, []int{2,3,4,5}...)
+	s = append(s, []int{2, 3, 4, 5}...)
 	fmt.Println(s)
 	fmt.Println("Length = ", len(s))
 	fmt.Println("Capacity = ", cap(s))
 
-/*
-	// 2D array
-	var matrix2d [2][2]int = [2][2]int{
-		[2]int{0, 1}, [2]int{2, 3},
-	} // declaration and initialization in a single line
-	fmt.Printf("%v\n", matrix2d)
-	// initialization in seprate line
-	matrix2d[0] = [2]int{1, 2}
-	matrix2d[1] = [2]int{3, 4}
-	fmt.Printf("%v\n", matrix2d)
-*/
+	p := []int{1, 2, 3, 4, 5}
+	fmt.Println(p)
+	r := p[1:] // pop from start
+	fmt.Println(r)
+	t := p[:len(p)-1] // pop from end
+	fmt.Println(t)
+	u := append(p[:2], p[3:]...) // pop from middle
+	fmt.Println(u)
+	fmt.Println(p)
+
+	
+		// 2D array
+		var matrix2d [2][2]int = [2][2]int{
+			[2]int{0, 1}, [2]int{2, 3},
+		} // declaration and initialization in a single line
+		fmt.Printf("%v\n", matrix2d)
+		// initialization in seprate line
+		matrix2d[0] = [2]int{1, 2}
+		matrix2d[1] = [2]int{3, 4}
+		fmt.Printf("%v\n", matrix2d)
+	
 }
